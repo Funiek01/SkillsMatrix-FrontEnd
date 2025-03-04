@@ -70,29 +70,29 @@
                         </div>
   
                         <!-- Password -->
-                        <label class="form-label" for="password">Password</label>
+                        <label class="form-label" for="reactiveValidatorsId">Password</label>
                         <sdwds-password-input
-                          inputId="password"
-                          [formControl]="userForm.controls.password"
+                          inputId="reactiveValidatorsId"
+                          [formControl]="reactiveValidatorsPassword"
                           [strengths]="validatorsStrengths"
                           [validators]="specificValidators"
-                          (errors)="passwordErrors = $event"
+                          (errors)="reactiveValidatorsErrors = $event"
                         ></sdwds-password-input>
-  
-                        @if (passwordErrors) {
-                          <div class="invalid-feedback d-block">
-                            <ul>
-                              @if (passwordErrors?.minlength) {
-                                <li>Password must be at least {{ passwordErrors.minlength.requiredLength }} characters long</li>
-                              }
-                              @if (passwordErrors?.lowercaseRequired) {
-                                <li>Must contain a lowercase letter</li>
-                              }
-                              @if (passwordErrors?.uppercaseRequired) {
-                                <li>Must contain an uppercase letter</li>
-                              }
-                            </ul>
-                          </div>
+                        @if (reactiveValidatorsPassword.errors) {
+                        <div class="invalid-feedback d-block">
+                          @if (reactiveValidatorsPassword.errors?.['required']) { Your password is required } @else { Your password should
+                          meet the minimum requirements:
+                          <ul>
+                            @if (reactiveValidatorsPassword.errors?.['minlength']) {
+                            <li>{{ reactiveValidatorsPassword.errors['minlength'].requiredLength }} characters</li>
+                            } @if (reactiveValidatorsPassword.errors?.['lowercaseRequired']) {
+                            <li>a lowercase letter</li>
+                            } @if (reactiveValidatorsPassword.errors?.['uppercaseRequired']) {
+                            <li>an uppercase letter</li>
+                            }
+                          </ul>
+                          }
+                        </div>
                         }
   
                         <!-- Submit Button -->

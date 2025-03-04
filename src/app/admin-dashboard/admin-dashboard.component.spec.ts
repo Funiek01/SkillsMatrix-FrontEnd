@@ -11,7 +11,7 @@ describe('AdminDashboardComponent', () => {
       imports: [AdminDashboardComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(AdminDashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
