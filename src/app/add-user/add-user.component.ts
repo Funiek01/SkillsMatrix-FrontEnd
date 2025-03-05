@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { customPatternValidator, PasswordStrength, SdwdsPasswordInputComponent } from '@sdworx/sdwds/password-input';
-import '@angular/localize/init';
+// import '@angular/localize/init';
 
 @Component({
   selector: 'app-add-user',
   standalone: true,
-  imports: [ReactiveFormsModule, SdwdsPasswordInputComponent],
+  imports: [ReactiveFormsModule, SdwdsPasswordInputComponent, FormsModule],
   templateUrl: './add-user.component.html',
   styleUrl: './add-user.component.scss'
 })
 export class AddUserComponent {
+  positions: string[] = ['Software Engineer', 'Project Manager', 'HR Manager', 'Designer', 'QA Engineer'];
+  teams: string[] = ['A-Team', 'B-Team', 'HR'];
+  
   userForm: FormGroup; 
+  ngModelPhoneValidation = '';
+  reactivePhoneValidation = new FormControl('');
   constructor(private fb: FormBuilder) { 
     this.userForm = this.fb.group({
       firstName: ['', Validators.required],

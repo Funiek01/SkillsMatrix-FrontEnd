@@ -9,12 +9,12 @@
                   <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                       <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                        Add User <i class="illustrative-personal-info"></i>
+                        Edit User Details <i class="illustrative-settings"></i>
                       </p>
   
                       <form [formGroup]="userForm">
                         <p class="d-flex flex-row text-left h5 fw-bold mb-2 mx-3 mx-md-0 mt-4">
-                          Enter the Details
+                          Update Details
                         </p>
   
                         <!-- First Name -->
@@ -72,32 +72,7 @@
                             }
                           </select>
                         </div>
-  
-                        <!-- Password -->
-                        <label class="form-label" for="reactiveValidatorsId">Password</label>
-                        <sdwds-password-input
-                          inputId="reactiveValidatorsId"
-                          [formControl]="reactiveValidatorsPassword"
-                          [strengths]="validatorsStrengths"
-                          [validators]="specificValidators"
-                          (errors)="reactiveValidatorsErrors = $event"
-                        ></sdwds-password-input>
-                        @if (reactiveValidatorsPassword.errors) {
-                        <div class="invalid-feedback d-block">
-                          @if (reactiveValidatorsPassword.errors?.['required']) { Your password is required } @else { Your password should
-                          meet the minimum requirements:
-                          <ul>
-                            @if (reactiveValidatorsPassword.errors?.['minlength']) {
-                            <li>{{ reactiveValidatorsPassword.errors['minlength'].requiredLength }} characters</li>
-                            } @if (reactiveValidatorsPassword.errors?.['lowercaseRequired']) {
-                            <li>a lowercase letter</li>
-                            } @if (reactiveValidatorsPassword.errors?.['uppercaseRequired']) {
-                            <li>an uppercase letter</li>
-                            }
-                          </ul>
-                          }
-                        </div>
-                        }
+
   
                         <!-- Submit Button -->
                         <div class="d-flex justify-content-center mx-4 mb-2 mb-lg-2">
