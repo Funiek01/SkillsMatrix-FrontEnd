@@ -6,6 +6,7 @@ import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashbo
 import { ManagerFeedbackComponent } from './manager-feedback/manager-feedback.component';
 import { EditProfileAdminComponent } from './edit-profile-admin/edit-profile-admin.component';
 import { HomeComponent } from './home/home.component';
+import { UserSelfAssessmentComponent } from './user-self-assessment/user-self-assessment.component';
 
 export const routes: Routes = [
     {path: 'login', component: LoginComponent},
@@ -17,5 +18,8 @@ export const routes: Routes = [
     {path: 'manager-feedback', component: ManagerFeedbackComponent},
     {path: 'edit-user-admin', component: EditProfileAdminComponent},
     {path: 'home', component: HomeComponent},
+    {path: 'self-assessment-user', component: UserSelfAssessmentComponent},
     { path: '**', redirectTo: '/home' },
+    
+    
 ];

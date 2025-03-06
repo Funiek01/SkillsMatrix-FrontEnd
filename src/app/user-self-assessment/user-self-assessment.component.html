@@ -1,1 +1,75 @@
-<p>user-self-assessment works!</p>
+<div class="container-fluid p-3">
+    <div class="row align-items-center">
+      <!-- Left Side: Labels and Search -->
+      <div class="col-lg-7 col-md-6" style="min-height: 120px;">
+        <div class="btn-group" role="group" aria-label="Default buttongroup">
+          <button class="btn btn-primary btn-lg btn-span">
+            <span>Submit <i class="illustrative-export-3 "></i></span>
+          </button>
+          <button class="btn btn-primary btn-lg btn-span">
+            <span>Back <i class="icons8-o-back-arrow"></i></span>
+          </button>
+        </div>
+    </div>
+  
+      <!-- Right Side: Top Section -->
+      <div class="col-lg-5 col-md-6">
+        <div class="d-flex justify-content-between align-items-center bg-light p-3 rounded gap-1">
+          <div>
+            <p class="mb-1 fs-6"><strong>Hire Date:</strong> 01/01/2022</p>
+            <p class="mb-1 fs-6"><strong>Position:</strong> Trainee Fullstack Developer</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <h4 class="mb-0 me-3">John Doe</h4>
+            <span class="avatar w-96">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIIte7CFh9xcOpbxTrL03vATLooVyhZYxKoA&s" 
+                alt="Profile">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-lg-12 col-xl-11">
+      <div class="card text-black dark-card" style="border-radius: 25px;">
+        <div class="card-body p-md-4">
+          <div class="row justify-content-center">
+            <div class="container my-2">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h2 class="fw-bold mb-3">Programming</h2>
+                  <i class="feature-expertise" style="width: 200px; height: 200px;"></i>
+                </div>
+  
+
+                <div>
+                  <h2 class="fw-bold mb-3">Pick one option:</h2>
+
+
+
+                  @for (language of programmingLanguages; track language) {
+                    <div class="mb-0">
+                      <h4 class="fw-bold">{{ language }}</h4>
+                      <div class="btn-group btn-group-segmented" role="group" aria-label="Skill Level">
+                        @for (skill of [0, 1, 2, 3, 4]; track skill) {
+                          <button class="btn btn-primary" 
+                                  [ngClass]="{'btn-danger': selectedSkills[language] === skill, 'btn-primary active': selectedSkills[language] !== skill}" 
+                                  (click)="selectSkill(language, skill)">
+                            <span>{{ skill }}</span>
+                          </button>
+                        }
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
