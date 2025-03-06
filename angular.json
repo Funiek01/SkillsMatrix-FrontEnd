@@ -38,7 +38,7 @@
               "node_modules/@sdworx/sdwds-icons/css/main.min.css"
             ],
             "outputHashing": "media",
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
@@ -101,7 +101,7 @@
               "node_modules/@sdworx/sdwds-icons/css/main.min.css"
             ],
             "outputHashing": "media",
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           }
         }
       }

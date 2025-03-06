@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-brand d-flex align-items-center">
+      <a href="#" class="mr-3">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g style="mix-blend-mode:multiply">
+            <path d="M45.6408 18.8L13.8 36.8322L15.868 40L47.8 22.0896L45.6408 18.8Z" fill="#E4003A"/>
+          </g>
+          <g style="mix-blend-mode:multiply">
+            <path d="M30.0695 53.2L33.6 52.9256L28.6512 6.79999L25 7.07436L30.0695 53.2Z" fill="#870B58"/>
+          </g>
+          <g style="mix-blend-mode:multiply">
+            <path d="M12.2 23.1226L42.6139 38.2L43.8 34.4919L13.447 19.2L12.2 23.1226Z" fill="#F8AD07"/>
+          </g>
+        </svg>
+      </a>
+      <div style="font-size: 24px; font-family: Roboto, sans-serif; font-weight: 500; line-height: 24px; color: black; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+        Skills Matrix
+      </div>
+    </div>
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto ">
+        <a class="nav-item nav-link" [routerLink]="['/manager']" routerLinkActive="active text-primary">Manager panel</a>
+        <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active text-primary">Item</a>
+        <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active text-primary">Item</a>
+      </div>
+    </div>
+
+
+    <div class="ml-auto d-flex justify-content-center">
+      <button class="btn btn-primary btn-xl" [routerLink]="['/login']">
+        <i class="icons8-o-at-sign"></i>
+        <span>Login</span>
+      </button>
+    </div>
+  </nav>
