@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { AddUserComponent } from './add-user/add-user.component';
-import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
-import { ManagerFeedbackComponent } from './manager-feedback/manager-feedback.component';
-import { EditProfileAdminComponent } from './edit-profile-admin/edit-profile-admin.component';
-import { HomeComponent } from './home/home.component';
-import { UserSelfAssessmentComponent } from './user-self-assessment/user-self-assessment.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { LoginComponent } from './components/login/login.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { EmployeeDashboardComponent } from './components/employee-dashboard/employee-dashboard.component';
+import { ManagerFeedbackComponent } from './components/manager-feedback/manager-feedback.component';
+import { EditProfileAdminComponent } from './components/edit-profile-admin/edit-profile-admin.component';
+import { HomeComponent } from './components/home/home.component';
+import { UserSelfAssessmentComponent } from './components/user-self-assessment/user-self-assessment.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 export const routes: Routes = [
     {path: 'login', component: LoginComponent},
